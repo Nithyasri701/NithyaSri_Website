@@ -1,0 +1,91 @@
+/* Reset and base styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  line-height: 1.6;
+  background-color: #fffaf0;
+}
+
+/* Hero section */
+.hero {
+  background: linear-gradient(135deg, #ffe6e6, #ffcccc);
+  text-align: center;
+  padding: 60px 20px;
+  animation: fadein 1s ease-in-out;
+}
+.hero h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+.hero p {
+  font-size: 1.2em;
+}
+
+/* Flavors grid */
+.flavors {
+  padding: 40px 20px;
+  text-align: center;
+}
+.flavors h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+.flavor-card {
+  background-color: #fff0f0;
+  padding: 20px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 160px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  transform: translateY(20px);
+  animation: bounceIn 0.8s ease-out forwards;
+}
+.flavor-card:nth-child(1) { animation-delay: 0.1s; }
+.flavor-card:nth-child(2) { animation-delay: 0.3s; }
+.flavor-card:nth-child(3) { animation-delay: 0.5s; }
+.flavor-card:nth-child(4) { animation-delay: 0.7s; }
+.flavor-card:nth-child(5) { animation-delay: 0.9s; }
+
+.flavor-name {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+  font-size: 1.2em;
+}
+.flavor-price {
+  display: block;
+  color: #d35400;
+  font-size: 1.1em;
+}
+
+/* Footer */
+footer {
+  background: #ffcccc;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+/* Animations */
+@keyframes bounceIn {
+  0% { opacity: 0; transform: translateY(-50px); }
+  60% { opacity: 1; transform: translateY(10px); }
+  100% { transform: translateY(0); }
+}
+@keyframes fadein {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
